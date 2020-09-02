@@ -19,28 +19,6 @@ app.get('/api/health-check', (req, res, next) => {
     .catch(err => next(err));
 });
 
-app.use('/api', (req, res, next) => {
-  next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
-});
-
-// app.get('/api/users/', (req, res, next) => {
-//   const userInfo = `
-//     select *
-//     from "users"
-//     where "userId" = $1
-//   `;
-//   if (req.session.userId) {
-//     const params = [req.session.userId];
-//     db.query(userInfo, params)
-//       .then(userData => {
-//         res.status(200).json(userData.rows[0]);
-//       })
-//       .catch(err => console.error(err));
-//   } else {
-//     next(new ClientError('No user was logged in', 200));
-//   }
-// });
-
 app.get('/api/signers', (req, res, next) => {
   const allSigners = `
       select *
@@ -48,7 +26,13 @@ app.get('/api/signers', (req, res, next) => {
       `;
   db.query(allSigners)
     .then(signersData => {
-      res.status(200).json(signersData.rows[0]);
+      const signersResponse = signersData.rows;
+      if (!signersResponse) {
+        next(new ClientError(`No signers of the petition found! ${req.method} ${req.originalUrl}`, 400));
+      } else {
+        res.status(200).json(signersData.rows);
+      }
+
     })
     .catch(err => console.error(err));
 });
@@ -57,7 +41,7 @@ app.post('/api/signers', (req, res, next) => {
   const parsedName = req.body.signerName;
   const parsedEmail = req.body.signerEmail;
 
-  const text = `insert into "singers" ("signerName", "signerEmail")
+  const text = `insert into "signers" ("signersName", "signersEmail")
                 values($1, $2)
                 returning *`;
   const values = [parsedName, parsedEmail];
@@ -75,6 +59,10 @@ app.post('/api/signers', (req, res, next) => {
       });
       console.error(err);
     });
+});
+
+app.use('/api', (req, res, next) => {
+  next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
 });
 
 app.use((err, req, res, next) => {
