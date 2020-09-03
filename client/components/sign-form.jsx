@@ -57,11 +57,15 @@ class SignForm extends React.Component {
   render() {
     return (
       <div>
+        <div className="banner-container center-container">
+          <img src="./images/grbannermain.jpg" alt="Banner Image" className="petition-banner"></img>
+        </div>
         <div className="sign-up-container">
+          <h3 className="petition-header">Let&apos;s make a difference!</h3>
           <input type="text" className="form-input" placeholder="Name" onChange={this.handleNameChange} value={this.state.name}/>
           <input type="text" className="form-input" placeholder="Email" onChange={this.handleEmailChange} value={this.state.email} />
-          <div>
-            <button type="submit" className="form-button confirm" onClick={() => this.handleSubmit(this.state)}>Sign Petition</button>
+          <div className="center-container form-button-container">
+            <button type="submit" className="form-button confirm transforming-button" onClick={() => this.handleSubmit(this.state)}>Sign Petition</button>
           </div>
         </div>
       </div>

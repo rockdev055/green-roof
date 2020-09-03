@@ -10,6 +10,7 @@ body{
 .header-img {
   padding: .5rem;
   width: 3rem;
+  padding-left: 1.1rem;
 }
 
 .row {
@@ -48,5 +49,105 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 5rem;
+  border: 3px ridge #6d9276;
+  margin: auto;
+  width: 50%;
+  padding: 2rem 0;
+  border-radius: 5px;
+  /* padding: 5rem; */
+}
+
+.form-input {
+  width: 50%;
+  margin: auto;
+  height: 60px;
+  margin-bottom: 2rem;
+  padding-left: 10px;
+  font-size: 120%;
+  border-radius: 5px;
+  border: 1px solid snow;
+  transition: .5s ease-in-out;
+  /* border: 1px solid #eb8f8f; */
+}
+.center-container{
+  margin: auto
+}
+.banner-container {
+  justify-content: center;
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.form-button {
+  font-size: 1.2rem
+}
+
+.transforming-button {
+  background-color: #eb8f8f;
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: 1px solid lavender;
+  transition: .5s ease-in-out;
+  text-decoration: none;
+  color: black;
+  user-select: none;
+  outline: none;
+}
+.transforming-button:hover{
+  cursor: pointer;
+  box-shadow: 0 0 0 1px transparent, 0 0 0 2px #6d9276, 0 0 0 3px #6d9276, 0 0 0 4.5px transparent, 0 0 0 5px #6d9276;
+  border-radius: 10px;
+  background: none;
+  color: lavender;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+.transforming-button:active {
+  border-radius: 100px;
+}
+.petition-banner {
+  width: 50%;
+  border: 5px ridge black;
+  box-shadow: 0 15px 40px 0 rgba(0,0,0,0.11),
+    0 5px 20px 0 rgba(0,0,0,0.08);
+}
+.petition-header {
+  text-align: center;
+}
+.text-center {
+  text-align: center;
+}
+
+.home-container {
+  padding: 3rem;
+}
+
+.home-banner-container {
+  background-image: url('./images/grFront.png');
+  height: 500px;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+    box-shadow: 0 15px 40px 0 rgba(0,0,0,0.11),
+}
+.home-text {
+  font-size: 2rem;
+}
+
+.hero-banner {
+  position: relative;
+  display: block;
+  max-height: 650px;
+  background: url(./images/uc-santa-barbara-storke-tower-ucen-ocean.jpg) center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 75vh;
+}
+@media screen and (min-width: 40em) {
+.home-hero-banner {
+    height: 80vh;
+    background-size: cover;
+  }
 }

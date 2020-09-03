@@ -9,8 +9,9 @@ function Header() {
         </a>
       </div>
       <div></div>
-      <div className="mr-3 dropdown-menu-head">
-        <a className="header-link" href="/sign-petition">Sign Here</a>
+      <div className="links-container">
+        <a className="header-link" href="/sign-petition">About</a>
+        <a className="header-link" href="/sign-petition">Sign The Petition!</a>
       </div>
     </div>
   );
