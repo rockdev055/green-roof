@@ -10,8 +10,8 @@ function Header() {
       </div>
       <div></div>
       <div className="links-container">
-        <a className="header-link" href="/sign-petition">About</a>
-        <a className="header-link" href="/sign-petition">Sign The Petition!</a>
+        <a className="header-link" href="/about">About</a>
+        <a className="header-link" href="/sign-petition">Petition</a>
       </div>
     </div>
   );

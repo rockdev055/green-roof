@@ -5,6 +5,8 @@
 body{
   background-color: var(--main-color);
   margin: 0;
+  overflow-x: hidden;
+  font-family: Roboto,Helvetica Neue,Arial,sans-serif;
 }
 
 .header-img {
@@ -51,9 +53,10 @@ body{
   flex-direction: column;
   border: 3px ridge #6d9276;
   margin: auto;
-  width: 50%;
+  width: 75%;
   padding: 2rem 0;
   border-radius: 5px;
+  background-color: #81a78a;
   /* padding: 5rem; */
 }
 
@@ -144,6 +147,18 @@ body{
   background-size: cover;
   overflow: hidden;
   height: 75vh;
+}
+.banner-text {
+  position: relative;
+  text-align: center;
+  display: block;
+  max-width: 1010px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 15%;
+  z-index: 100;
+  color: #222222;
+  font-size: 1.5rem;
 }
 @media screen and (min-width: 40em) {
 .home-hero-banner {
