@@ -1,6 +1,15 @@
 import React from 'react';
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.goToPetition = this.goToPetition.bind(this);
+  }
+
+  goToPetition() {
+    this.props.history.push('/sign-petition');
+  }
+
   render() {
     return (
       <>
@@ -14,6 +23,9 @@ class Home extends React.Component {
           <div className="row">
             <div className="inner-card">
               <h1>Sign the Petition</h1>
+              <div>{this.props.signees.length} people have signed</div>
+              <button onClick={this.goToPetition} className="transforming-button">
+                <a className="text-center button-link" href="/sign-petition">Act Now</a></button>
             </div>
             <div className="inner-card">
               <div>Sign the Petition</div>

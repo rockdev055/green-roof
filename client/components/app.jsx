@@ -26,12 +26,16 @@ class App extends React.Component {
   }
 
   render() {
+    if (!this.state.signees) {
+      return (<div>Loading</div>);
+    }
     return (
       <div>
         <BrowserRouter>
           <Header/>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={props => <Home history={props.history} signees={this.state.signees}/>}/>
+            {/* <Route exact path="/" component={Home} signees={this.state.signees}/> */}
             <Route path="/sign-petition" component={SignForm} />
             <Route path="/about" component={About} />
           </Switch>

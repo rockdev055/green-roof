@@ -173,6 +173,9 @@ body{
 
   top: -64px;
 }
+.button-link {
+  text-decoration: none;
+}
 .row{
   margin: auto;
 }
@@ -200,5 +203,6 @@ body{
     float: left;
     width: 333px;
     height: 250px;
+    margin-right: 5px;
   }
 }
