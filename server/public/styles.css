@@ -175,6 +175,18 @@ body{
 }
 .button-link {
   text-decoration: none;
+  color: white;
+}
+.home-petition-button:hover .button-link   {
+  color: black;
+}
+.home-petition-button{
+  margin-top: 1rem;
+  color: white;
+  background-color: rgb(142, 142, 214);
+}
+.home-petition-button:hover {
+  background-color: var(--main-color);
 }
 .row{
   margin: auto;
@@ -186,6 +198,9 @@ body{
   height: 200px;
   margin-bottom: 10px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+}
+.ucsb-banner-img{
+  width: 20em;
 }
 @media screen and (min-width: 40em) {
   .home-hero-banner {
