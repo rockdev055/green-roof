@@ -209,7 +209,33 @@ body{
   width: 7em;
   border: 1px ridge white;
 }
+
+.why-container {
+  /* padding: 5rem; */
+  border: 2px solid green;
+  margin: 1rem 2rem;
+}
+.why-title{
+  color: white;
+  background-color: #30312f;
+  padding: 3rem;
+  border: 2px ridge white;
+}
+.why-info-container {
+  padding: 1px;
+}
+.why-info{
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgb(133, 212, 133);
+}
+.why-text {
+  margin-left: 2rem;
+}
 .footer {
+  border-top: 1px solid darkslategrey;
   padding: 2rem;
   font-size: 2rem;
 }
@@ -235,7 +261,7 @@ body{
     width: 20em;
   }
   .p-section {
-    padding: 0 8rem;
+    padding: 0 10rem;
     font-size: 2rem;
   }
 }
