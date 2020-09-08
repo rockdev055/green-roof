@@ -220,6 +220,8 @@ body{
   background-color: #30312f;
   padding: 3rem;
   border: 2px ridge white;
+  margin: 0 1rem;
+  margin-top: 1rem;
 }
 .why-info-container {
   padding: 1px;
@@ -230,6 +232,14 @@ body{
   margin: 1rem;
   border-radius: 5px;
   border: 1px solid rgb(133, 212, 133);
+  /* font-size: 1.5rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.why-info i {
+  font-size: 2rem;
+  margin: auto 0;
 }
 .why-text {
   margin-left: 2rem;
@@ -263,5 +273,9 @@ body{
   .p-section {
     padding: 0 10rem;
     font-size: 2rem;
+  }
+  .why-info {
+    justify-content: start;
+    font-size: 1.5rem;
   }
 }

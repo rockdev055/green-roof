@@ -39,6 +39,16 @@ class About extends React.Component {
             </div>
           </section>
         </div>
+        <div>
+          <div className="why-container">
+            <h1 className="why-title">Who we&apos;ll support</h1>
+            <section className="support-container">
+              <div className="support-card">
+                Food Bank
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
     );
   }
