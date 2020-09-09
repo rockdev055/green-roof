@@ -44,9 +44,32 @@ class About extends React.Component {
             <h1 className="why-title">Who we&apos;ll support</h1>
             <section className="support-container">
               <div className="support-card">
-                Food Bank
+                <img className="support-img"src="./images/AS-Food-bank.jpg"></img>
+                <div className="text-center">Food Bank</div>
+              </div>
+              <div className="support-card">
+                <img className="support-img" src="./images/ucsbenvs.png"></img>
+                <div className="text-center">Students</div>
+              </div>
+              <div className="support-card">
+                <img className="support-img" src="./images/greenFund.jpg"></img>
+                <div className="text-center">UCSB Green Fund Initiative</div>
+              </div>
+              <div className="support-card">
+                <img className="support-img" src="./images/roofgarden.jpg"></img>
+                <div className="text-center">The community!</div>
               </div>
             </section>
+          </div>
+        </div>
+        <div className="home-container">
+          <h2 className="home-text">Our Plans</h2>
+          <div className="plans-text-container">
+            <img src="./images/green-roof-graphic.png"></img>
+            <div className="text-center">
+              Through garnering attention and educating what our proposition is about, we can work to improve UCSB together.
+            </div>
+
           </div>
         </div>
       </div>

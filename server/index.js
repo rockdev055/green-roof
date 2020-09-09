@@ -61,6 +61,18 @@ app.post('/api/signers', (req, res, next) => {
     });
 });
 
+app.get('/api/userEmail/:email', (req, res, next) => {
+  const checkEmail =
+    'select exists(select 1 from "signers" where "signersemail"=$1)';
+  const inputtedEmail = [req.params.email];
+  db.query(checkEmail, inputtedEmail)
+    .then(result => {
+      const userEmail = result.rows[0];
+      res.json(userEmail);
+    })
+    .catch(err => next(err));
+});
+
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
 });

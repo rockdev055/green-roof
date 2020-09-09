@@ -6,7 +6,8 @@ class SignForm extends React.Component {
     this.state = {
       name: '',
       email: '',
-      validEmail: ''
+      validEmail: '',
+      existingEmail: null
     };
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -24,7 +25,18 @@ class SignForm extends React.Component {
   handleSubmit(info) {
 
     if (this.state.validEmail) {
-      this.signPetition(info);
+      fetch(`/api/userEmail/${info.email}`, {
+      })
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          if (!data.exists) {
+            this.setState({ existingEmail: false });
+          } else {
+            this.setState({ existingEmail: true });
+          }
+        });
     }
   }
 
@@ -55,6 +67,7 @@ class SignForm extends React.Component {
   }
 
   render() {
+    const validEmail = this.state.validEmail ? 'valid' : 'invalid';
     return (
       <div>
         <div className="banner-container center-container">
@@ -65,7 +78,7 @@ class SignForm extends React.Component {
           <input type="text" className="form-input" placeholder="Name" onChange={this.handleNameChange} value={this.state.name}/>
           <input type="text" className="form-input" placeholder="Email" onChange={this.handleEmailChange} value={this.state.email} />
           <div className="center-container form-button-container">
-            <button type="submit" className="form-button confirm transforming-button" onClick={() => this.handleSubmit(this.state)}>Sign Petition</button>
+            <button type="submit" className={` ${validEmail} form-button confirm transforming-button`} onClick={() => this.handleSubmit(this.state)}>Sign Petition</button>
           </div>
         </div>
       </div>
