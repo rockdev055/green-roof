@@ -38,9 +38,8 @@ app.get('/api/signers', (req, res, next) => {
 });
 
 app.post('/api/signers', (req, res, next) => {
-  const parsedName = req.body.signerName;
-  const parsedEmail = req.body.signerEmail;
-
+  const parsedName = req.body.name;
+  const parsedEmail = req.body.email;
   const text = `insert into "signers" ("signersName", "signersEmail")
                 values($1, $2)
                 returning *`;
@@ -63,7 +62,7 @@ app.post('/api/signers', (req, res, next) => {
 
 app.get('/api/userEmail/:email', (req, res, next) => {
   const checkEmail =
-    'select exists(select 1 from "signers" where "signersemail"=$1)';
+    'select exists(select 1 from "signers" where "signersEmail"=$1)';
   const inputtedEmail = [req.params.email];
   db.query(checkEmail, inputtedEmail)
     .then(result => {

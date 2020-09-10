@@ -23,7 +23,6 @@ class SignForm extends React.Component {
   }
 
   handleSubmit(info) {
-
     if (this.state.validEmail) {
       fetch(`/api/userEmail/${info.email}`, {
       })
@@ -33,6 +32,7 @@ class SignForm extends React.Component {
         .then(data => {
           if (!data.exists) {
             this.setState({ existingEmail: false });
+            this.signPetition(info);
           } else {
             this.setState({ existingEmail: true });
           }
@@ -67,9 +67,9 @@ class SignForm extends React.Component {
   }
 
   render() {
-    const validEmail = this.state.validEmail ? 'valid' : 'invalid';
+    const validEmail = this.state.name && this.state.validEmail && this.state.email ? 'valid' : 'invalid';
     return (
-      <div>
+      <div className="petition-container">
         <div className="banner-container center-container">
           <img src="./images/grbannermain.jpg" alt="Banner Image" className="petition-banner"></img>
         </div>

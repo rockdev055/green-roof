@@ -3,7 +3,10 @@ import React from 'react';
 function Footer() {
   return (
     <div className="footer text-center">
-      Footer
+      <div className="footer-twitter-icon">
+        <a target="blank" href="https://twitter.com/UCSBGreenRoof"><i className="twitter-icon fab fa-twitter" /></a>
+      </div>
+      © UCSB Green Roofs
     </div>
   );
 }
