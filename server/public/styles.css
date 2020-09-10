@@ -2,11 +2,16 @@
   --main-color: #BAD8C1;
 }
 
+* {
+  animation: .25s fade-in linear;
+}
+
 body{
   background-color: var(--main-color);
   margin: 0;
   overflow-x: hidden;
   font-family: Roboto,Helvetica Neue,Arial,sans-serif;
+  /* animation: .2s fade-in linear; */
 }
 
 .header-img {
@@ -22,16 +27,16 @@ body{
 
 .header-item {
   justify-content: space-between;
-  z-index: 99;
-    height: 60px;
-    background-color: #6d9276;
-    position: sticky;
-    top: 0;
-    box-shadow: 2px 2px 10px 0 #72a37e;
-    color: white;
-    line-height: 50px;
-    width: 100%;
-    margin: 0;
+  height: 60px;
+  background-color: #6d9276;
+  position: sticky;
+  top: 0;
+  box-shadow: 2px 2px 10px 0 #72a37e;
+  color: white;
+  line-height: 50px;
+  width: 100%;
+  margin: 0;
+  z-index: 999;
 }
 
 .header-link {
@@ -45,6 +50,14 @@ body{
 }
 .header-link:hover {
   color: #206a5d;
+}
+.twitter-icon {
+  font-size: 2rem;
+  padding-top: .75rem;
+  color: #c9d9fb;
+}
+.twitter-icon:hover {
+  cursor: pointer;
 }
 
 .sign-up-container {
@@ -151,6 +164,7 @@ body{
   font-size: 2rem;
   padding: 3rem;
   color: white;
+  padding-top: 0;
 }
 .home-header {
   font-size: 3rem;
@@ -203,6 +217,7 @@ body{
 }
 .home-petition-button:hover {
   background-color: var(--main-color);
+  cursor: pointer;
 }
 .row{
   margin: auto;
@@ -254,6 +269,13 @@ body{
 .why-text {
   margin-left: 2rem;
 }
+
+.green-roof-info-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
 .footer {
   border-top: 1px solid darkslategrey;
   padding: 2rem;
@@ -281,7 +303,7 @@ body{
   margin-bottom: 1rem;
 }
 .plans-text-container {
-  padding-bottom: 2rem;
+  padding: 2rem;
   color: white;
 }
 @media screen and (min-width: 40em) {
@@ -316,4 +338,15 @@ body{
   .support-img {
     width: 25rem;
   }
+  .plans-text-container {
+    font-size: 1.5rem;
+  }
+  .green-roof-info-container {
+    flex-direction: row;
+  }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
 }

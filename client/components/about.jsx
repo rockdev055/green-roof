@@ -6,6 +6,12 @@ class About extends React.Component {
       <div>
         <div className="home-banner-container">
         </div>
+        <div className="why-container green-roof-info-container">
+          <h1 className="why-title">What are Green Roofs?</h1>
+          {/* <img src="./images/green-roof-graphic.png"></img> */}
+          {/* <div className="green-roof-diagram"></div> */}
+          <div>poop</div>
+        </div>
         <div className="why-container">
           <h1 className="why-title">Why Respond</h1>
           <section className="why-info-container">
@@ -65,7 +71,6 @@ class About extends React.Component {
         <div className="home-container">
           <h2 className="home-text">Our Plans</h2>
           <div className="plans-text-container">
-            <img src="./images/green-roof-graphic.png"></img>
             <div className="text-center">
               Through garnering attention and educating what our proposition is about, we can work to improve UCSB together.
             </div>

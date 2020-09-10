@@ -4,10 +4,15 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.goToPetition = this.goToPetition.bind(this);
+    this.goToAbout = this.goToAbout.bind(this);
   }
 
   goToPetition() {
     this.props.history.push('/sign-petition');
+  }
+
+  goToAbout() {
+    this.props.history.push('/about');
   }
 
   render() {
@@ -30,16 +35,16 @@ class Home extends React.Component {
             <div className="inner-card">
               <h1>What we&apos;re about</h1>
               <div>Find out about green roofs</div>
-              <button onClick={this.goToPetition} className="transforming-button home-petition-button">
-                <a className="text-center button-link" href="/sign-petition">Learn More</a></button>
+              <button onClick={this.goToAbout} className="transforming-button home-petition-button">
+                <a className="text-center button-link" href="/about">Learn More</a></button>
             </div>
           </div>
         </div>
-        <h1 className="text-center home-header">
-          Our Goal
-        </h1>
-        <div className="text-center home-container">
 
+        <div className="text-center home-container">
+          <h1 className="text-center home-header">
+            Our Goal
+          </h1>
           <main className="home-text">
             <div className="p-section">
               <p>

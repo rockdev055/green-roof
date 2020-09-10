@@ -8,7 +8,11 @@ function Header() {
           <img className="header-img" src="./images/leafImg.png" href="/" />
         </a>
       </div>
-      <div></div>
+      <div>
+
+        <a target="blank" href="https://twitter.com/UCSBGreenRoof"><i className="twitter-icon fab fa-twitter"/></a>
+
+      </div>
       <div className="links-container">
         <a className="header-link" href="/about">About</a>
         <a className="header-link" href="/sign-petition">Petition</a>
