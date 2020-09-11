@@ -337,6 +337,11 @@ body{
   font-size: 1.5rem;
   padding: 1.3rem;
 }
+.react-player {
+  margin: auto;
+
+  margin-bottom: 1.5rem;
+}
 
 @media screen and (min-width: 40em) {
   .home-hero-banner {
@@ -378,6 +383,9 @@ body{
   }
   .footer {
     height: 3rem;
+  }
+  .react-player {
+     height: 20rem !important;
   }
 }
 

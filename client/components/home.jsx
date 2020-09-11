@@ -1,4 +1,5 @@
 import React from 'react';
+import Video from './video';
 
 class Home extends React.Component {
   constructor(props) {
@@ -58,7 +59,10 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-
+        <div>
+          <h2 className="text-center">Listen to our Podcast!</h2>
+          <Video/>
+        </div>
         <div className="text-center home-container">
           <h1 className="text-center home-header">
             Our Goal
