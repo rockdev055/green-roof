@@ -10,7 +10,16 @@ class About extends React.Component {
           <h1 className="why-title">What are Green Roofs?</h1>
           {/* <img src="./images/green-roof-graphic.png"></img> */}
           {/* <div className="green-roof-diagram"></div> */}
-          <div>poop</div>
+          <div className="why-title what-text">
+            <div>
+              Green Roofs are installations of the roof of a building that is covered with vegetation!
+            </div>
+            <br></br>
+            <div>
+              It is a perfect medium for growing plants and serves as a roof barrier for drainage and irrigation.
+            </div>
+          </div>
+
         </div>
         <div className="why-container">
           <h1 className="why-title">Why Respond</h1>
@@ -69,12 +78,15 @@ class About extends React.Component {
           </div>
         </div>
         <div className="home-container">
-          <h2 className="home-text">Our Plans</h2>
-          <div className="plans-text-container">
-            <div className="text-center">
+          <h2 className="plans-header">Our Plans</h2>
+          <div className="plans-text-container text-center">
+            <div className="">
               Through garnering attention and educating what our proposition is about, we can work to improve UCSB together.
             </div>
-
+            <br></br>
+            <div>
+              Let&apos;s convince Chancellor Yang and other decision makers at UCSB to implement green roofs for a greener tomorrow!
+            </div>
           </div>
         </div>
       </div>

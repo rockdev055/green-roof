@@ -286,6 +286,8 @@ body{
   border-top: 1px solid darkslategrey;
   padding: 1rem;
   font-size: 1rem;
+  background-color: #6d9276;
+  height: 3vh;
 }
 .footer-twitter-icon {
   position: relative;
@@ -293,7 +295,7 @@ body{
   bottom: 15px;
 }
 .footer-twitter-icon .twitter-icon {
-  color: #6969f6;
+  color: #b4bbf6;
 }
 .support-container {
   display: flex;
@@ -316,9 +318,20 @@ body{
   width: 15rem;
   margin-bottom: 1rem;
 }
+.plans-header {
+  color: white;
+  margin-left: 1.5rem;
+}
 .plans-text-container {
   padding: 2rem;
   color: white;
+  padding-top: .5rem;
+  font-size: 1.2rem;
+}
+.what-text {
+  background-color: #6d9276;
+  font-size: 1.5rem;
+  padding: 1.3rem;
 }
 
 @media screen and (min-width: 40em) {
