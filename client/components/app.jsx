@@ -17,8 +17,9 @@ class App extends React.Component {
             <Route path="/sign-petition" component={SignForm} />
             <Route path="/about" component={About} />
           </Switch>
-          <Footer/>
+
         </BrowserRouter>
+        <Footer />
       </div>
     );
   }

@@ -1,7 +1,9 @@
 :root {
   --main-color: #BAD8C1;
 }
-
+html {
+  height: 100%;
+}
 * {
   animation: .25s fade-in linear;
 }
@@ -203,7 +205,8 @@ body{
   border-radius: 5px;
 }
 .petition-container {
-  height: 100vh;
+  /* height: 100vh; */
+  margin-bottom: 5rem;
 }
 .home-sign-petition{
 
@@ -284,10 +287,11 @@ body{
 
 .footer {
   border-top: 1px solid darkslategrey;
-  padding: 1rem;
   font-size: 1rem;
+  padding: 1rem;
+  padding-top:2rem;
   background-color: #6d9276;
-  height: 3vh;
+  height: 4rem;
 }
 .footer-twitter-icon {
   position: relative;
@@ -371,6 +375,9 @@ body{
   }
   .green-roof-info-container {
     flex-direction: row;
+  }
+  .footer {
+    height: 3rem;
   }
 }
 
