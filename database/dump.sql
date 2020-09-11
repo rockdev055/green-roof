@@ -16,6 +16,7 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
+DROP TABLE public.signers;
 DROP EXTENSION plpgsql;
 DROP SCHEMA public;
 --
@@ -44,6 +45,29 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: signers; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.signers (
+    "signersName" text,
+    "signersEmail" text
+);
+
+
+--
+-- Data for Name: signers; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.signers ("signersName", "signersEmail") FROM stdin;
+Lee Li	theninjalee@gmail.com
+\.
 
 
 --
