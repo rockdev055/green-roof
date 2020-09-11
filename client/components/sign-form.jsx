@@ -60,8 +60,7 @@ class SignForm extends React.Component {
     })
       .then(response => response.json())
       .then(data => {
-        // eslint-disable-next-line no-console
-        console.log('succ');
+        this.props.history.push('/');
       })
       .catch(err => console.error(err));
   }

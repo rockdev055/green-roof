@@ -3,8 +3,23 @@ import React from 'react';
 class Home extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      signees: null
+    };
     this.goToPetition = this.goToPetition.bind(this);
     this.goToAbout = this.goToAbout.bind(this);
+  }
+
+  componentDidMount() {
+    this.getPetitions();
+  }
+
+  getPetitions() {
+    fetch('/api/signers')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ signees: data });
+      });
   }
 
   goToPetition() {
@@ -16,6 +31,9 @@ class Home extends React.Component {
   }
 
   render() {
+    if (!this.state.signees) {
+      return (<div>Loading</div>);
+    }
     return (
       <>
         <div className="hero-banner">
@@ -28,7 +46,7 @@ class Home extends React.Component {
           <div className="row">
             <div className="inner-card">
               <h1>Sign the Petition</h1>
-              <div>{this.props.signees.length} people have signed</div>
+              <div>{this.state.signees.length} people have signed</div>
               <button onClick={this.goToPetition} className="transforming-button home-petition-button">
                 <a className="text-center button-link" href="/sign-petition">Act Now</a></button>
             </div>
